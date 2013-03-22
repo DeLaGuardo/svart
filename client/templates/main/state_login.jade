@@ -1,0 +1,24 @@
+.main.js-main
+  .-container
+    table.-table._bordered_
+      thead
+        tr
+          th(style="background-color: orange; width: 150px;")
+            i.-icon-cloud.-icon-light-
+            | Менеджер файлов
+          th Название
+          th Размер
+          th Тип
+          th URL
+        //- each file in files
+        //-   tr
+        //-     td= file.id
+        //-     td= file.name
+        //-     td= file.size
+        //-     td= file.type
+            //- td.-btn.-success-
+            //-   a(href='{{url}}') Скачать
+      tbody#file-list
+    #progress(align='center') 0% complete
+    #box(style='background: #eee; font-size: 26px; width: 400px; height: 300px; line-height: 300px; margin: 0 auto; text-align: center;')
+      | Connecting...

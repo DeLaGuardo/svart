@@ -1,0 +1,42 @@
+.main.js-main
+  .-container
+    .-row
+      .-col6
+        form#form-login.-form._horizontal_
+          .-form-row
+            label
+              | Логин
+            span#login.-form-field.-col4._huge
+              input#login(type='text', value='Желаемый логин', onfocus="this.value=(this.value=='Желаемый логин') ? '' : this.value;", onblur="this.value=(this.value=='') ? 'Желаемый логин' : this.value;", autocomplet='off')
+          .-form-row
+            label
+              | Email
+            span#email.-form-field.-col4._huge
+              input#email(type='text', value='Ваш email', onfocus="this.value=(this.value=='Ваш email') ? '' : this.value;", onblur="this.value=(this.value=='') ? 'Ваш email' : this.value;", autocomplet='off')
+          .-form-row
+            label
+              | Пароль
+            span#password.-form-field.-col4._huge
+              input#password(type="password", value='Ваш пароль', onfocus="this.value=(this.value=='Ваш пароль') ? '' : this.value;", onblur="this.value=(this.value=='') ? 'Ваш пароль' : this.value;", autocomplet='off', onkeydown="if(event.keyCode==13)dologin();")
+          .-form-row
+            .-form-group
+              label(style="font-size: 20px;")
+                | Запомнить Меня
+                input(type='checkbox')
+              br#login-button
+              .-btn.-primary-._huge.js-button
+                | Зарегистрироваться
+      .-col6
+        form#form-login-social.-form._horizontal_.form-login-social
+          label
+              | Регистрация через...
+          .-form-row
+            a#fblogin.-btn.-primary-._huge.social.fb-tooltip(authlink="/auth/facebook")
+              i.-icon-social-facebook
+            a#twlogin.-btn.-primary-._huge.social.tw-tooltip
+              i.-icon-social-twitter
+            a#ghlogin.-btn.-primary-._huge.social.gh-tooltip
+              i.-icon-social-github
+            a#vklogin.-btn.-primary-._huge.social.vk-tooltip
+              i.-icon-social-vkontakte
+

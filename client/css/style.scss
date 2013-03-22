@@ -1,0 +1,131 @@
+body,html {
+    margin           : 0;
+    width            : 100%;
+    height           : 100%;
+    line-height      : 19px;
+    // background-image : url('/images/backgrounds/background.jpg');
+}
+
+// body {
+//     background: #61e4bd;
+//     background-image: url("/images/backgrounds/zen1.png"), url("/images/backgrounds/zen2.png");
+//     background-repeat: repeat-x, repeat;
+//     // background-image : url('/images/backgrounds/background.jpg');
+// }
+
+@mixin heading {
+    background-color: #565656;
+    color: transparent;
+    text-shadow: 0px 2px 2px rgba(255,255,255,0.7);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+@mixin nav_inner {
+    ul {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    ul li a {
+        color: #fff;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .logo {
+        display: inline-block;
+        width: 39px;
+        height: 26px;
+        margin-top: 5px;
+        // background-image: url("/images/logo1.png");
+        background-image: url("/images/logo.png");
+        float: left;
+        &:hover { background-position: -39px 0; }
+    }
+}
+
+.navigator {
+    width: 100%;
+    z-index: 9999;
+    position: relative;
+    text-align: right;
+    display: inline-block;
+    background-color: #303236;
+
+    @include nav_inner;
+}
+
+.wrapper {
+  margin: 50px auto;
+  width: 280px;
+  height: 370px;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 8px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 8px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 90;
+}
+
+.main {
+    position: relative;
+    padding: 50px;
+    height: 100%;
+    // background-color: #123123;
+
+    h1 {
+        @include heading;
+    }
+
+    label {
+        font-size: 35px;
+        font-weight: bold;
+        padding-top: 7px;
+        padding-bottom: 15px;
+        @include heading;
+    }
+
+    .social {
+        width: 60px;
+        text-align: center;
+        margin-right: 12px;
+    }
+
+    form {
+        padding-top: 30%;
+    }
+
+    .form-login-social {
+        text-align: center;
+    }
+
+    table {
+        .-btn {
+            border-radius: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-menu-major {
+        display: none;
+    }
+
+    .main-menu-minor {
+        display: block;
+        li {
+            margin-right: 60px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .main-menu-major {
+        display: block;
+    }
+
+    .main-menu-minor {
+        display: none;
+    }
+}
+

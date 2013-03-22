@@ -1,0 +1,33 @@
+{
+  "name"        : "svart"
+, "description" : "An awesome real time application"
+, "version"     : "0.0.1"
+, "author"      : "Me <me@mydomain.com>"
+, "private"     : true
+, "engines"     : {
+    "node"      : ">= 0.10.0"
+  }
+, "dependencies"    : {
+    "socketstream"  : "0.3.x"
+  , "ss-coffee"     : "0.1.x"
+  , "ss-jade"       : "0.1.x"
+  , "ss-stylus"     : "0.1.x"
+  , "ss-hogan"      : "0.1.x"
+  , "ss-sockjs"     : "latest"
+  , "redis"         : "*"
+  , "mongoose"      : "*"
+  , "gridfs-stream" : "*"
+  , "bcrypt"        : "~0.7.5"
+  , "node-uuid"     : "~1.4.0"
+  , "postman"       : "~0.2.0"
+  , "binaryjs"      : "~0.1.7"
+  , "async"         : "latest"
+  }
+, "devDependencies": {
+    "grunt-contrib-sass": "latest"
+}
+, "scripts"      :{
+    "preinstall" : "npm link lodash"
+  , "start"      : "nodemon app.coffee"
+  }
+}
