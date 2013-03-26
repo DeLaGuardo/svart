@@ -27,7 +27,7 @@ module.exports = (functions) ->
         cb hash: hash, salt: salt
 
   functions.fetchUserFromSession = (req, res, next) ->
-    # console.log req.session
+    console.log req.session.userId
     ss.api.app.models.User.findOne {_id: req.session.userId}, (err, user) ->
       console.log err, user
       if !err and user?

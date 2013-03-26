@@ -5,9 +5,6 @@ User      = sss.api.app.models.User
 Redis     = sss.api.app.redis
 config    = sss.api.app.config
 functions = sss.api.app.helpers.functions
-# store     = sss.api.gridStore
-
-# console.log ss.api
 
 exports.actions = (req, res, ss) ->
   req.use 'session'
