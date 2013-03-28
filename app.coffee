@@ -80,7 +80,7 @@ bs.on 'connection', (client) ->
       file.save (err, saved) ->
         if err?
           console.log err
-        console.log saved
+        # console.log saved
         stream.write
           file:
             _id: saved._id.toString()

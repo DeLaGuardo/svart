@@ -14,9 +14,6 @@ module.exports = (app) ->
   require("#{__dirname}/models/user.coffee") app
   require("#{__dirname}/models/file.coffee") app
 
-  # console.log app
-
   app.store.once 'open', () ->
     grid = gridfs app.store.db
     ss.api.add 'gridStore', grid
-    console.log ss.api.gridStore
