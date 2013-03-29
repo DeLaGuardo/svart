@@ -28,7 +28,6 @@
   , "mocha"             : "latest"
   , "gently"            : "latest"
   , "soda"              : "latest"
-  , "cake"              : "latest"
 }
 , "scripts"      :{
     "preinstall" : "npm link lodash"
