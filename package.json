@@ -2,7 +2,7 @@
   "name"        : "svart"
 , "description" : "An awesome real time application"
 , "version"     : "0.0.1"
-, "author"      : "Me <me@mydomain.com>"
+, "author"      : "DeLaGuardo <delaguardo@gmail.com>"
 , "private"     : true
 , "engines"     : {
     "node"      : ">= 0.10.0"
